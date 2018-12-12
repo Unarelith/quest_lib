@@ -1,4 +1,4 @@
-WTDN is a mod for Minetest which is
+quest_lib is a mod for Minetest which is
 
 Copyright (C) 2018-2019 Quentin Bazin
 

@@ -1,6 +1,6 @@
 --[[
 
-	wtdn
+	quest_lib
 	================
 
 	Copyright (C) 2018-2019 Quentin Bazin
@@ -12,11 +12,12 @@
 
 local modpath = minetest.get_modpath(minetest.get_current_modname())
 
-wtdn = rawget(_G, "wtdn") or {}
-wtdn.modpath = modpath
+quest_lib = rawget(_G, "quest_lib") or {}
+quest_lib.modpath = modpath
 
-dofile(modpath .. "/quest.lua")
+dofile(modpath .. "/api.lua")
+dofile(modpath .. "/events.lua")
 dofile(modpath .. "/formspec.lua")
-dofile(modpath .. "/craftitems.lua")
-dofile(modpath .. "/crafting.lua")
+dofile(modpath .. "/quest_book.lua")
+dofile(modpath .. "/craft_guide.lua")
 

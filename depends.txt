@@ -1,1 +1,2 @@
-default
+fs_core
+item_drop?
