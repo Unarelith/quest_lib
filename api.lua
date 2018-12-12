@@ -15,10 +15,12 @@ quest_lib.pages = {}
 
 local player_quest_cache = {}
 
+-- FIXME: A local temporary cache could be better than this
 quest_lib.quests.get_page = function(player_name)
 	return quest_lib.quests.get(0, player_name, 'page')
 end
 
+-- FIXME: A local temporary cache could be better than this
 quest_lib.quests.set_page = function(player_name, page)
 	if quest_lib.pages[page] then
 		quest_lib.quests.set(0, player_name, 'page', page)
@@ -71,7 +73,6 @@ end
 quest_lib.quests.reward_quest = function(page, player_name, quest)
 	local count = quest_lib.quests.get(page, player_name, quest)
 	for _, v in ipairs(quest_lib.pages[page].quests) do
-		minetest.log(v.quest.." == "..quest.." and "..v.count.." == "..count)
 		if v.quest == quest and v.count == count then
 			local player = minetest.get_player_by_name(player_name)
 			local itemstack = player:get_inventory():add_item('main', v.reward)
