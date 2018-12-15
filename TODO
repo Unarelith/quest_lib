@@ -1,11 +1,13 @@
 TODO
 
-# High Priority (for SkyFactory 0.2.1a)
-
-• TODO: Add a new reward system
-• TODO: Add quests dependency
-
 # Refactoring
 
 • TODO: Rename `page` to `chapter`
+• TODO: Use player metadata instead of storing data in new files
+
+# Features
+
+• TODO: Add a new reward system
+• TODO: Add quests dependency
+• TODO: Add a “team” system
 
